@@ -34,13 +34,13 @@ public class Biblioteca {
     }
 
     void registrarLivro(Integer quantidade){
-        if(ativa && quantidade > 0 && quantidade != null){
+        if(ativa && quantidade != null && quantidade > 0){
             qtdLivros += quantidade;
         }
     }
 
     Integer emprestar(Integer quantidade){
-        if(ativa && quantidade > 0 && quantidade <= qtdLivros && quantidade != null){
+        if(ativa && quantidade != null && quantidade > 0 && quantidade <= qtdLivros){
             this.qtdLivros -= quantidade;
             return quantidade;
         } else{
@@ -49,7 +49,7 @@ public class Biblioteca {
     }
 
     Integer devolver(Integer quantidade){
-        if(ativa && quantidade > 0 && quantidade != null){
+        if(ativa && quantidade != null && quantidade > 0){
             this.qtdLivros += quantidade;
             return quantidade;
         } else{
@@ -76,7 +76,7 @@ public class Biblioteca {
     }
 
     Boolean reajustarMulta(Double percentual){
-        if(percentual > 0 && percentual != null){
+        if(percentual != null && percentual > 0){
             multaDiaria = multaDiaria + (multaDiaria * percentual) ;
             return true;
         } else{
