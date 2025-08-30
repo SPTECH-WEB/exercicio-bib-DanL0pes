@@ -41,6 +41,7 @@ public class Biblioteca {
 
     Integer emprestar(Integer quantidade){
         if(ativa && quantidade > 0 && quantidade <= qtdLivros && quantidade != null){
+            this.qtdLivros -= quantidade;
             return quantidade;
         } else{
             return null;
@@ -49,6 +50,7 @@ public class Biblioteca {
 
     Integer devolver(Integer quantidade){
         if(ativa && quantidade > 0 && quantidade != null){
+            this.qtdLivros += quantidade;
             return quantidade;
         } else{
             return null;
@@ -69,6 +71,7 @@ public class Biblioteca {
     void transferir(Biblioteca destino, Integer quantidade){
         if(this.ativa && destino.getAtiva() && quantidade <= this.qtdLivros){
             destino.registrarLivro(quantidade);
+            this.qtdLivros -= quantidade;
         }
     }
 
