@@ -13,4 +13,12 @@ public class Biblioteca {
         ativa = true;
     }
 
+    void registrarLivro(Integer quantidade){
+        if(ativa & qtdLivros > 0){
+            qtdLivros++;
+        }
+    }
+
+
+
 }
