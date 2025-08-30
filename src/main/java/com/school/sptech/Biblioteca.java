@@ -38,7 +38,7 @@ public class Biblioteca {
     Integer desativar(){
         if(ativa){
             ativa = false;
-            int qtdLivrosAnterior = qtdLivros;
+            Integer qtdLivrosAnterior = qtdLivros;
             qtdLivros = 0;
             return qtdLivrosAnterior;
         }else{
