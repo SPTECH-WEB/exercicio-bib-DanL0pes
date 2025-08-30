@@ -35,7 +35,7 @@ public class Biblioteca {
 
     void registrarLivro(Integer quantidade){
         if(ativa & qtdLivros > 0){
-            qtdLivros++;
+            qtdLivros += quantidade;
         }
     }
 
@@ -63,6 +63,12 @@ public class Biblioteca {
             return qtdLivrosAnterior;
         }else{
             return null;
+        }
+    }
+
+    void transferir(Biblioteca destino, Integer quantidade){
+        if(this.ativa & destino.getAtiva() & quantidade <= this.qtdLivros){
+            destino.registrarLivro(quantidade);
         }
     }
 }
