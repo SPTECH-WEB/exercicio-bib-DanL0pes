@@ -74,7 +74,7 @@ public class Biblioteca {
 
     Boolean reajustarMulta(Double percentual){
         if(percentual > 0 && percentual != null){
-            multaDiaria *= percentual;
+            multaDiaria = multaDiaria + (multaDiaria * percentual) ;
             return true;
         } else{
             return false;
