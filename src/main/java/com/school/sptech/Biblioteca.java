@@ -71,4 +71,13 @@ public class Biblioteca {
             destino.registrarLivro(quantidade);
         }
     }
+
+    Boolean reajustarMulta(Double percentual){
+        if(percentual > 0 & percentual != null){
+            multaDiaria *= percentual;
+            return true;
+        } else{
+            return false;
+        }
+    }
 }
