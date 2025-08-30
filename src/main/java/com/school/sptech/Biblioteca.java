@@ -19,6 +19,13 @@ public class Biblioteca {
         }
     }
 
+    Integer emprestar(Integer quantidade){
+        if(quantidade > 0 & quantidade <= qtdLivros & quantidade != null){
+            return quantidade;
+        } else{
+            return  null;
+        }
+    }
 
 
 }
