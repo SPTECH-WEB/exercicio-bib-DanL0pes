@@ -34,4 +34,15 @@ public class Biblioteca {
             return null;
         }
     }
+
+    Integer desativar(){
+        if(ativa){
+            ativa = false;
+            int qtdLivrosAnterior = qtdLivros;
+            qtdLivros = 0;
+            return qtdLivrosAnterior;
+        }else{
+            return null;
+        }
+    }
 }
