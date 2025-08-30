@@ -13,6 +13,26 @@ public class Biblioteca {
         ativa = true;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Double getMultaDiaria() {
+        return multaDiaria;
+    }
+
+    public Integer getQtdLivros() {
+        return qtdLivros;
+    }
+
+    public Boolean getAtiva() {
+        return ativa;
+    }
+
     void registrarLivro(Integer quantidade){
         if(ativa & qtdLivros > 0){
             qtdLivros++;
